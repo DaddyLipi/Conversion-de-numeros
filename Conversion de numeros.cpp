@@ -57,61 +57,9 @@ void decimalaOctal(int dec)
 void decimalaHexadecimal(int dec)
 {
     char hexal[100];
-    int num = dec, tamano, aux, i = 0;
-    while (num != 0)
-    {
-        aux = num % 16;
-        switch (aux)
-        {
-        case 0:
-            hexal[i] = '0';
-            break;
-        case 1:
-            hexal[i] = '1';
-            break;
-        case 2:
-            hexal[i] = '2';
-            break;
-        case 3:
-            hexal[i] = '3';
-            break;
-        case 4:
-            hexal[i] = '4';
-            break;
-        case 5:
-            hexal[i] = '5';
-            break;
-        case 6:
-            hexal[i] = '6';
-            break;
-        case 7:
-            hexal[i] = '7';
-            break;
-        case 8:
-            hexal[i] = '8';
-            break;
-        case 9:
-            hexal[i] = '9';
-            break;
-        case 10:
-            hexal[i] = 'A';
-            break;
-        case 11:
-            hexal[i] = 'B';
-            break;
-        case 12:
-            hexal[i] = 'C';
-            break;
-        case 13:
-            hexal[i] = 'D';
-            break;
-        case 14:
-            hexal[i] = 'E';
-            break;
-        case 15:
-            hexal[i] = 'F';
-            break;
-        }
+    char[16]=['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+
+        hexal[dec]=char[dec];
         num = num / 16;
         i++;
         if (num == 1)
